@@ -5,7 +5,7 @@ import RealtimeOutlinedCard from "./components/RealtimeCard";
 import "./App.css";
 function App() {
   return (
-    <div className="App">
+    <div>
       <ButtonAppBar></ButtonAppBar>
       <Container sx={{m: 2}}>
         <Grid container spacing={2}>
