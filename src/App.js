@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Container, Grid } from "@mui/material";
+import ButtonAppBar from "./components/ButtonAppBar";
+import OutlinedCard from "./components/Card";
+import RealtimeOutlinedCard from "./components/RealtimeCard";
+import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ButtonAppBar></ButtonAppBar>
+      <Container sx={{m: 2}}>
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <OutlinedCard title="Minimum Temperature">xs=8</OutlinedCard>
+          </Grid>
+          <Grid item xs={4}>
+            <RealtimeOutlinedCard title="Latest Temperature">xs=4</RealtimeOutlinedCard>
+          </Grid>
+          <Grid item xs={4}>
+            <OutlinedCard title="Maximum Temperature">xs=4</OutlinedCard>
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 }
