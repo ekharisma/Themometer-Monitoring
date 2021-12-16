@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 export default function RealtimeCard(props) {
     const base = "http://localhost:8000/sensor/latest";
-    const [temperature, setTemperature] = useState(1);
+    const [temperature, setTemperature] = useState(25);
     const [isRed, setState] = useState(false)
 
     useEffect(() => {
